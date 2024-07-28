@@ -62,6 +62,17 @@ This project is a Real-Time Data Processing System for Weather Monitoring. It ut
 ![Project Diagram](flowchart.png)
 
 ![Project Diagram](diagram.png)
+
+
+## Screen shots
+![Project Diagram](1.png)
+
+![Project Diagram](2.png)
+
+![Project Diagram](3.png)
+
+![Project Diagram](4.png)
+
 ## Additional Information
 
 - Ensure that both the backend and frontend servers are running simultaneously to allow the application to function correctly.
