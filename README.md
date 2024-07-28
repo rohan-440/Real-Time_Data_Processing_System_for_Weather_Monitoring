@@ -58,7 +58,8 @@ This project is a Real-Time Data Processing System for Weather Monitoring. It ut
     ```sh
     npm start
     ```
-
+## Flow Chart
+![Project Diagram](images/flowchart.png)
 ## Additional Information
 
 - Ensure that both the backend and frontend servers are running simultaneously to allow the application to function correctly.
