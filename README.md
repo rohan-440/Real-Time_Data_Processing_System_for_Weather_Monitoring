@@ -60,6 +60,8 @@ This project is a Real-Time Data Processing System for Weather Monitoring. It ut
     ```
 ## Flow Chart
 ![Project Diagram](flowchart.png)
+
+![Project Diagram](diagram.png)
 ## Additional Information
 
 - Ensure that both the backend and frontend servers are running simultaneously to allow the application to function correctly.
