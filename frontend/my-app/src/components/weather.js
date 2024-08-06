@@ -22,12 +22,10 @@ const WeatherForm = () => {
                 min_temp: response.data.min_temp,
                 max_temp: response.data.max_temp
             };
-            debugger;
             setWeather(weatherData);
             saveWeather(weatherData);
             setError('');
         } catch (error) {
-            debugger;
             setError('Error fetching weather data. Please check the city name.');
         }
     };
