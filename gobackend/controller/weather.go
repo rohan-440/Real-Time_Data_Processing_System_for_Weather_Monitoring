@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"errors"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -8,7 +9,11 @@ import (
 )
 
 func GetWeather(c *gin.Context) {
-	city, _ := c.GetQuery("city")
+	city, ok := c.GetQuery("city")
+	if !ok || len(city) == 0 {
+		c.Error(errors.New("invalid city"))
+		return
+	}
 
 	weather := dao.GetWeather(city)
 	c.JSON(http.StatusOK, weather)

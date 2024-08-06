@@ -30,7 +30,6 @@ const WeatherStats = () => {
         try {
             const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=e62008a65bc2f60013cf91a54dc4e0cc&units=metric`);
             const data = response.data;
-            debugger;
             const summary = {
                 average_temperature: data.main.temp, // Average temperature (current temperature)
                 maximum_temperature: data.main.temp_max, // Maximum temperature
@@ -40,7 +39,6 @@ const WeatherStats = () => {
             setStats(summary);
             setError('');
         } catch (error) {
-            debugger;
             setError('City Not Found');
             setStats(null);
         } finally {

@@ -9,26 +9,25 @@ const WeatherForm = () => {
 
     const fetchWeather = async () => {
         try {
-            const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather`, {
-                params: {
-                    q: city,
-                    units: 'metric',
-                    appid: 'e62008a65bc2f60013cf91a54dc4e0cc'  // Replace with your API key
-                }
-            });
+
+            const response = await axios.get(`http://localhost:8080/weather?city=${city}`);
+
+            console.log(response)
             const weatherData = {
-                city: city.toLowerCase(),
-                main: response.data.weather[0].main,
-                temp: response.data.main.temp,
-                feels_like: response.data.main.feels_like,
+                city: response.data.city.toLowerCase(),
+                main: response.data.dominant_weather,
+                temp: response.data.temp,
+                feels_like: response.data.feels_like,
                 dt: response.data.dt,
-                min_temp: response.data.main.temp_min,
-                max_temp: response.data.main.temp_max
+                min_temp: response.data.min_temp,
+                max_temp: response.data.max_temp
             };
+            debugger;
             setWeather(weatherData);
             saveWeather(weatherData);
             setError('');
         } catch (error) {
+            debugger;
             setError('Error fetching weather data. Please check the city name.');
         }
     };

@@ -15,7 +15,7 @@ func CreateWeather(w *models.Weather) {
 func GetWeather(city string) *models.Weather {
 	w := models.Weather{}
 
-	query := fmt.Sprintf("SELECT * FROM main.weathers WHERE city = '?' ORDER BY created_at LIMIT 1", city)
+	query := fmt.Sprintf("SELECT * FROM main.weathers WHERE city = '%s' ORDER BY created_at LIMIT 1", city)
 	DB.Raw(query).Scan(&w)
 	return &w
 }

@@ -14,7 +14,7 @@ const AlertSettings = () => {
         // Fetch current threshold
         const fetchThreshold = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/api/alert_threshold/');
+                const response = await axios.get('http://localhost:8080/api/alert_threshold/');
                 if (response.data.length > 0) {
                     setThreshold(response.data[0].threshold);
                 }
