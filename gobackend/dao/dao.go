@@ -7,6 +7,13 @@ import (
 	"gorm.io/gorm"
 )
 
+type TempType string
+
+var Kelvin TempType = "kelvin"
+var Celsius TempType = "celsius"
+
+var currentTempType = Celsius
+
 var DB *gorm.DB
 
 func ConnectDatabase(dbName string) {
